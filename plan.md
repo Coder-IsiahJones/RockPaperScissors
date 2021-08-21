@@ -7,3 +7,4 @@ Project Steps
 5. When clicking the button, hide the buttons and show the winner.
 6. Figure out what the computer is going to pick.
 7. Compare the results to see who wins.
+8. Add some type of celebration if the player wins.
