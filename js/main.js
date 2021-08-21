@@ -36,6 +36,7 @@ const referee = (userHand, houseHand) => {
     if (userHand == "paper" && houseHand == "rock") {
         getResult("YOU WIN!");
         setScore(SCORE + 1);
+        playConfetti(userHand);
     }
     if (userHand == "paper" && houseHand == "paper") {
         getResult("It's a tie!");
@@ -43,6 +44,7 @@ const referee = (userHand, houseHand) => {
     if (userHand == "rock" && houseHand == "scissors") {
         getResult("YOU WIN!");
         setScore(SCORE + 1);
+        playConfetti(userHand);
     }
     if (userHand == "rock" && houseHand == "paper") {
         getResult("YOU LOSE!");
@@ -59,6 +61,7 @@ const referee = (userHand, houseHand) => {
     if (userHand == "scissors" && houseHand == "paper") {
         getResult("YOU WIN!");
         setScore(SCORE + 1);
+        playConfetti(userHand);
     }
 };
 
@@ -77,4 +80,28 @@ const getResult = (result) => {
 const setScore = (newScore) => {
     SCORE = newScore;
     document.querySelector(".score h1").innerText = newScore;
+}
+
+const playConfetti = (userHand) => {
+    const play = document.querySelector(`.${userHand}`);
+    const stop = document.querySelector(".newGame");
+
+    const svgContainer = document.getElementById('svg');
+    const animItem = bodymovin.loadAnimation({
+        wrapper: svgContainer,
+        animType: 'svg',
+        loop: false,
+        autoplay: false,
+        path: 'https://assets2.lottiefiles.com/packages/lf20_u4yrau.json'
+    });
+
+    play.addEventListener('click', () => {
+        svgContainer.classList.remove('hide');
+        animItem.goToAndPlay(0, true);
+    })
+
+    stop.addEventListener('click', () => {
+        const svg = document.querySelector("svg");
+        svg.remove();
+    })
 }
