@@ -64,14 +64,13 @@ body {
 .score h1 {
     color: #565468;
     font-size: 56px;
-    font-family: "Barlow", sans-serif;
 }
 
 .score p {
-    color: #2a45c2;
+    color: #b333be;
     font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
+    font-style: oblique;
+    font-weight: 700;
     line-height: 19px;
     letter-spacing: 2.5px;
     text-align: left;
@@ -173,4 +172,15 @@ body {
 .houseHand {
     display: flex;
     flex-direction: column;
+}
+
+.svg {
+    width: 300px;
+    position: absolute;
+    top: -40px;
+    pointer-events: none;
+}
+
+.hide {
+    display: none;
 }
