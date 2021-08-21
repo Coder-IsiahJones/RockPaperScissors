@@ -141,7 +141,7 @@ body {
 .contest .newGame {
     color: hsl(229, 25%, 31%);
     background-color: white;
-    padding: 12px 24px;
+    padding: 22px 30px;
     border-radius: 6px;
     cursor: pointer;
     transition: all 0.15s;
