@@ -23,9 +23,12 @@ body {
     align-items: center;
     width: 100vw;
     height: 100vh;
-    background: radial-gradient(134.34% 134.34% at 50% 0%,
-            #1f3757 0%,
-            #131537 100%);
+    background: #6441A5;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2a0845, #6441A5);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2a0845, #6441A5);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .scoreboard {
@@ -54,6 +57,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 
 .score h1 {
