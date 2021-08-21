@@ -5,11 +5,72 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rock Paper Scissors</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap" rel="stylesheet">
+
+    <!-- css -->
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
+    <div class="wrapper">
+        <div class="scoreboard">
+            <div class="title">
+                <img src="./assets/title.png" alt="Rock Paper Scissors">
+            </div>
 
+            <div class="score">
+                <p>SCORE</p>
+                <h1>0</h1>
+            </div>
+        </div>
+
+        <div class="hands">
+            <div class="hand paper">
+                <img src="./assets/Paper.png" alt="Paper" onclick="pickUserHand('paper')">
+            </div>
+            <div class="hand scissors">
+                <img src="./assets/Scissors.png" alt="Scissors" onclick="pickUserHand('scissors')">
+            </div>
+            <div class="hand rock">
+                <img src="./assets/Rock.png" alt="Rock" onclick="pickUserHand('rock')">
+            </div>
+        </div>
+
+        <div class="contest">
+            <div class="userhand">
+                <h1>YOU PICKED</h1>
+                <div class="handImageContainer">
+                    <img id="userPickImage" src="./assets/Paper.png" alt="Paper">
+                </div>
+            </div>
+
+            <div class="referee">
+                <div class="result">
+                    <h1>YOU WIN</h1>
+                </div>
+                <div class="newGame" onclick="restartGame()">
+                    PLAY AGAIN
+                </div>
+            </div>
+
+            <div class="houseHand">
+                <h1>THE HOUSE PICKED</h1>
+                <div class="handImageContainer">
+                    <img id="housePickImage" src="./assets/Scissors.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Javascript -->
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
